@@ -4,9 +4,6 @@
   import myfooter from '@/components/footer.vue';
 
   import { ref, provide } from "vue";
-
-  const leftSliderWidth = "163px";
-  provide( "leftSliderWidth", leftSliderWidth )
 </script> 
 
 <template> 
@@ -22,8 +19,8 @@
         <!-- header -->
         <myheader /> 
 
-        <!-- main -->
-        <div class="flex min-h-[calc(100vh-400px)] md:min-h-[calc(100vh-310px)] p-40px md:pt-125px md:px-0px justify-between ">
+        <!-- main  -->
+        <div class="flex min-h-[calc(100vh-350px)] md:min-h-[calc(100vh-310px)] px-40px pt-40px md:pt-125px md:px-0px justify-between ">
           <router-view></router-view>
         </div>
 

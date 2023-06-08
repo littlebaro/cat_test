@@ -1,9 +1,3 @@
-<script setup>
-    import { inject } from "vue";
-
-    const leftSliderWidth = inject( "leftSliderWidth" )
-</script>
-
 <template> 
 
     <!-- main_left -->
