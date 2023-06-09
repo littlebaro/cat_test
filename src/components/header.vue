@@ -5,7 +5,7 @@
 
     const isActive = ref( true );
 
-    let myclass = "text-#EFC862 underline"
+    let myclass = { 'text-#EFC862': isActive, "underline": isActive }
     function toggleMudel() {
         menuHidden.value = !menuHidden.value; 
     }; 
@@ -24,9 +24,9 @@
 
         <div class="hidden lg:flex h-25px gap-55px text-center"> 
 
-            <router-link to="/" class="w-52px" @click="addMyClass" :class="{ myclass: isActive }">Home</router-link>
+            <router-link to="/" class="w-52px" @click="addMyClass" :class="myclass">Home</router-link>
 
-            <router-link to="/Aircle" class="w-52px" @click="addMyClass">Aircle</router-link>
+            <router-link to="/Aircle" class="w-52px" @click="addMyClass" :class="myclass">Aircle</router-link>
 
             <div class="w-52px">About</div>
 
