@@ -8,26 +8,24 @@
 
 <template> 
 
-  <div class="grid grid-flow-col bg-gradient-to-b from-#161618/60 to-#313132 font-normal font-sans">
+  <div class="grid grid-flow-col bg-gradient-to-b from-#313132 to-#161618 font-normal font-sans relative">
 
     <!-- left -->
     <leftSlider />
     
     <!-- right -->
-    <div bg="center md:bottom no-repeat" class="grid  text-#FFFFFF bg-contain bg-[url(/public/Bg_Img.png)]">
+    <div bg="center md:bottom no-repeat" class="grid grid-rows-[105px_minmax(calc(100vh-310px),1fr)_auto] text-#FFFFFF bg-contain bg-[url(/public/Bg_Img.png)]">
 
         <!-- header -->
         <myheader /> 
 
         <!-- main  -->
-        <div class="flex min-h-[calc(100vh-350px)] md:min-h-[calc(100vh-310px)] px-40px pt-40px md:pt-125px md:px-0px justify-between ">
-          <router-view></router-view>
-        </div>
+        <router-view></router-view>
 
         <!-- footer -->
-        <myfooter />
+        <myfooter class="z-1"/>
 
-    </div> 
+    </div>  
 
   </div>
 
