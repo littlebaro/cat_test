@@ -1,54 +1,49 @@
-//import home from '@/components/home.vue' 
+//import home from "@/components/home.vue" 
 
 export const routes = [
   {
-      path: '/',
-      component: () => import('@/layout/defaultLayout.vue'),
+      path: "/",
+      component: () => import("@/layout/defaultLayout.vue"),
       children: [ 
         {
-          path: '',
-          component: () => import('@/views/home.vue'),
+          path: "",
+          component: () => import("@/pages/homePages.vue"),
           children: [
             { 
-              path: '', 
-              name: 'homeInfo', 
-              component: () => import('@/components/homeInfo.vue') 
+              path: "", 
+              name: "homeInfo", 
+              component: () => import("@/components/homeInfo.vue") 
             },
             {
-              path: 'Aircle',
-              name: 'Aircle',
-              component: () => import('@/components/Aircle.vue')
+              path: "Aircle",
+              name: "Aircle",
+              component: () => import("@/components/Aircle.vue")
             },
           ]
-        },
+        }, 
         {
-          path: 'about',
-          name: 'about',
-          component: () => import('@/views/AboutView.vue')
-        },
-        {
-          path: 'enterprise',
-          name: 'enterprise',
+          path: "loginPages",
+          name: "loginPages",
           meta: {
-            requiresAuth: true
+            requiresAuth: false
           },
-          component: () => import('@/views/EnterpriseView.vue')
+          component: () => import("@/pages/loginPages.vue")
         },
       ],
-  },
+  }, 
   {
-    path: '/',
-    component: () => import('@/layout/errorPageLayout.vue'),
+    path: "/",
+    component: () => import("@/layout/errorPageLayout.vue"),
     children: [
       {
-        path: 'IdentityDenyView',
-        name: 'IdentityDenyView',
-        component: () => import('@/views/IdentityDenyView.vue')
+        path: "IdentityDenyView",
+        name: "IdentityDenyView",
+        component: () => import("@/views/IdentityDenyView.vue")
       },
       {
-        path: ':pathMatch(.*)*',
-        name: 'NotFound',
-        component: () => import('@/views/PageNotFound.vue')
+        path: ":pathMatch(.*)*",
+        name: "NotFound",
+        component: () => import("@/views/PageNotFound.vue")
       },
     ],
   }

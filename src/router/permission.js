@@ -1,5 +1,5 @@
-//import { userAuthStore } from '../stores';
-import { storeToRefs } from 'pinia';
+//import { userAuthStore } from "../stores";
+import { storeToRefs } from "pinia";
 
 export function setupRoutePermission(routerInstance) {
   routerInstance.beforeEach(async (to, from)=> {
@@ -16,7 +16,7 @@ export function setupRoutePermission(routerInstance) {
       if (isUserLogin.value) { 
         return true
       }
-      return { name: 'IdentityDenyView' };
+      return { name: "IdentityDenyView" };
     }
   })
 }

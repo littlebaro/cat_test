@@ -1,8 +1,8 @@
-import { createPinia } from 'pinia'
+import { createPinia } from "pinia";
 
 export function setupPinia( AppInstance ) {
-    const pinia = createPinia()
-    AppInstance.use(pinia)
+    const pinia = createPinia();
+    AppInstance.use(pinia);
 }
 
-export * from './userAuthStore'
+export * from "./userAuthStore";

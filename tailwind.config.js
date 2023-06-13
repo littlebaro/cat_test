@@ -21,7 +21,6 @@ module.exports = {
       content: {
         "account": 'url( "../public/img/user-regular.svg" )',
         "passicion": 'url( "../public/img/lock-regular.svg" )',
-        //"eyeicion": 'url( "../public/img/eye-slash-regular.svg" )',
       },
       screens: {
         "xs":"320",

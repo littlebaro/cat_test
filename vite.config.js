@@ -20,7 +20,6 @@ export default defineConfig({
         target: "http://taitungttgo.cbsdinfo.com.tw/",
         changeOrigin: true, //是否跨域
         rewrite: (path) => {
-          console.log(path.replace(/^\/service^\/^\/api/, ''));
           return path.replace(/^\/service^\/^\/api/, '')
         }, 
       },

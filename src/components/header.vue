@@ -1,19 +1,11 @@
 <script setup>
-    import { ref } from 'vue';
+    import { ref } from "vue";
 
-    const menuHidden = ref( false ); 
-
-    const isActive = ref( true );
-
-    let myclass = { 'text-#EFC862': isActive, "underline": isActive }
+    const menuHidden = ref( false );  
+    
     function toggleMudel() {
         menuHidden.value = !menuHidden.value; 
-    }; 
-
-    function addMyClass() { 
-        isActive.value = !isActive.value;
     };
-
 </script> 
 
 <template>
@@ -24,15 +16,15 @@
 
         <div class="hidden lg:flex h-25px gap-55px text-center"> 
 
-            <router-link to="/" class="w-52px" @click="addMyClass" :class="myclass">Home</router-link>
+            <router-link to="/" class="w-52px">Home</router-link>
 
-            <router-link to="/Aircle" class="w-52px" @click="addMyClass" :class="myclass">Aircle</router-link>
+            <router-link to="/Aircle" class="w-52px">Aircle</router-link>
 
-            <div class="w-52px">About</div>
+            <div class="w-52px">About</div> 
 
-            <div class="w-52px">Loction</div>
+            <div class="w-52px">News</div>
 
-            <div class="w-52px">News</div> 
+            <router-link to="/loginPages" class="w-52px">Login</router-link>
 
         </div>
 
@@ -56,11 +48,11 @@
 
             <router-link to="/Aircle" class="w-52px" @click="toggleMudel">Aircle</router-link>
 
-            <router-link to="" class="w-52px" @click="toggleMudel">About</router-link>
+            <router-link to="/About" class="w-52px" @click="toggleMudel">About</router-link> 
 
-            <div class="w-52px" @click="toggleMudel">Loction</div>
-
-            <div class="w-52px" @click="toggleMudel">News</div> 
+            <div class="w-52px" @click="toggleMudel">News</div>
+            
+            <router-link to="/loginPages" class="w-52px" @click="toggleMudel">Login</router-link>
 
         </div>
 
@@ -73,3 +65,14 @@
     </div>
 
 </template>
+
+<style>
+.router-link-exact-active {
+    color:#505050;
+    width: auto;
+    padding:0px 10px;
+    /*text-decoration: underline;*/
+    border-radius: 50px;
+    background-color: #EFC862;
+}
+</style>

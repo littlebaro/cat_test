@@ -5,11 +5,11 @@
 
         <div class="hidden md:grid h-124px gap-32px items-center justify-center mb-40px">
 
-        <a bg="center no-repeat" class="w-20px h-20px bg-contain bg-[url(../public/tumblr.svg)]" href="#"></a>
+        <a bg="center no-repeat" class="w-20px h-20px bg-contain bg-[url(/public/tumblr.svg)]" href="#"></a>
 
-        <a bg="center no-repeat" class="w-20px h-20px bg-contain bg-[url(../public/linkedin-in.svg)]" href="#"></a>
+        <a bg="center no-repeat" class="w-20px h-20px bg-contain bg-[url(/public/linkedin-in.svg)]" href="#"></a>
 
-        <a bg="center no-repeat" class="w-20px h-20px bg-contain bg-[url(../public/facebook-f.svg)]" href="#"></a>
+        <a bg="center no-repeat" class="w-20px h-20px bg-contain bg-[url(/public/facebook-f.svg)]" href="#"></a>
 
         </div>
 

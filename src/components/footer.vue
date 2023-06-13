@@ -14,13 +14,13 @@
 
                 </div> 
 
-                <img class="h-6px object-scale-down object-left" src="../../public/Divide.png" alt="Divide"/>
+                <img class="h-6px object-scale-down object-left" src="/public/Divide.png" alt="Divide"/>
 
             </div>
 
             <div class="flex md:w-50% items-start md:items-center gap-24px flex-row-reverse md:flex-row">
 
-                <img class="w-30% md:w-50% object-scale-down object-left" src="../../public/Left.png" alt="left"/>
+                <img class="w-30% md:w-50% object-scale-down object-left" src="/public/Left.png" alt="left"/>
 
                 <div class="flex flex-col w-auto% gap-16px md:gap-24px">
 

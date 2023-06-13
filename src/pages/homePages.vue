@@ -1,9 +1,7 @@
 <script setup>
-  import leftSlider from '@/components/leftSlider.vue';
-  import myheader from '@/components/header.vue';
-  import myfooter from '@/components/footer.vue';
-
-  import { ref, provide } from "vue";
+  import leftSlider from "@/components/leftSlider.vue";
+  import myheader from "@/components/header.vue";
+  import myfooter from "@/components/footer.vue"; 
 </script> 
 
 <template> 
