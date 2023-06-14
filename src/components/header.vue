@@ -1,5 +1,6 @@
 <script setup>
     import { ref } from "vue";
+    import menuBtn from "../components/common/menuBtn.vue";
 
     const menuHidden = ref( false );  
     
@@ -10,21 +11,21 @@
 
 <template>
 
-    <div class="flex h-77px md:h-105px md:pl-40px md:gap-80px items-center md:justify-end justify-between">
+    <div class="flex h-77px md:h-105px md:pl-40px md:gap-80px items-center md:justify-end justify-between duration-500 sticky top-0">
 
         <div class="md:hidden flex w-82px h-61px px-24px py-8px md:m-40px text-41px text-white font-bold items-center">CAT</div>
 
         <div class="hidden lg:flex h-25px gap-55px text-center"> 
 
-            <router-link to="/" class="w-52px">Home</router-link>
+            <menuBtn :to="'/'">Home</menuBtn>
 
-            <router-link to="/Aircle" class="w-52px">Aircle</router-link>
+            <menuBtn :to="'/Aircle'">Aircle</menuBtn>
 
-            <div class="w-52px">About</div> 
+            <menuBtn :to="'/About'">About</menuBtn>
 
-            <div class="w-52px">News</div>
+            <menuBtn :to="'/News'">News</menuBtn>
 
-            <router-link to="/loginPages" class="w-52px">Login</router-link>
+            <menuBtn :to="'/loginPages'">Login</menuBtn>  
 
         </div>
 
@@ -42,17 +43,17 @@
 
         <div class="w-82px h-61px px-24px py-8px md:m-40px text-41px text-white font-bold items-center">CAT</div>
 
-        <div class="grid h-25px p-40px gap-15px text-center justify-end"> 
-
-            <router-link to="/" class="w-52px" @click="toggleMudel">Home</router-link>
-
-            <router-link to="/Aircle" class="w-52px" @click="toggleMudel">Aircle</router-link>
-
-            <router-link to="/About" class="w-52px" @click="toggleMudel">About</router-link> 
-
-            <div class="w-52px" @click="toggleMudel">News</div>
+        <div class="grid h-25px p-40px gap-15px text-center justify-end">
             
-            <router-link to="/loginPages" class="w-52px" @click="toggleMudel">Login</router-link>
+            <menuBtn :to="'/'" @click="toggleMudel">Home</menuBtn>
+
+            <menuBtn :to="'/Aircle'" @click="toggleMudel">Aircle</menuBtn>
+
+            <menuBtn :to="'/About'" @click="toggleMudel">About</menuBtn>
+
+            <menuBtn :to="'/News'" @click="toggleMudel">News</menuBtn>
+
+            <menuBtn :to="'/loginPages'" @click="toggleMudel">Login</menuBtn> 
 
         </div>
 
@@ -65,14 +66,3 @@
     </div>
 
 </template>
-
-<style>
-.router-link-exact-active {
-    color:#505050;
-    width: auto;
-    padding:0px 10px;
-    /*text-decoration: underline;*/
-    border-radius: 50px;
-    background-color: #EFC862;
-}
-</style>

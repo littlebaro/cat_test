@@ -1,9 +1,11 @@
 <script setup>
-    import { reactive, ref, inject } from "vue";
-    import Button from "../components/common/button.vue";
+    import { reactive, ref, inject } from "vue"; 
     import { useRouter } from "vue-router"; 
     import { setupUserAuthStore } from "@/stores";
     import { FETCH_USER_A } from "@/services2";
+
+    import MenuBtn from "../components/common/menuBtn.vue";
+    import Button from "../components/common/button.vue";
 
     let labelclass = "text-#9e9e9e"; 
     let myclass = "w-full h-11 border border-#7696E8 focus:outline-#7696E8 rounded-md px-4 py-2 pl-8 text-sm"; 
@@ -96,9 +98,9 @@
 
                 </div>
 
-                <Button>登入</Button>                
+                <Button :type="'submit'">登入</Button>                
 
-                <router-link to="/">home</router-link>
+                <MenuBtn :to="'/'">home</MenuBtn>
 
             </VForm>
 
