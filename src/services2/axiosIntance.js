@@ -33,4 +33,4 @@ axiosInstance.interceptors.response.use(function (response) {
     return Promise.reject(error);
 });
 
-export { axiosInstance }
+export { axiosInstance };
