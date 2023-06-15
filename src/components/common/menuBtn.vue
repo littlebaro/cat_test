@@ -6,24 +6,27 @@
         },
         class: {
             type: String,
-            default: "w-52px transition: all 1s ease-out;",
+            default: "w-auto px-10px py-1px rounded-50px hover:bg-#EFC862/50% transition: all 1s ease-out",
         },
     });
 </script> 
 
 <template>
-    <router-link :to="props.to" :class="props.class">
+
+    <router-link :to="props.to" :class="props.class" class="props.class">
+
         <slot></slot>
+
     </router-link>
+
 </template>
 
 <style>
-    .router-link-exact-active {
+    .router-link-exact-active,
+    .router-link-exact-active:hover {
         color: #505050;
         width: auto;
-        padding: 0px 10px;
         /*text-decoration: underline;*/
-        border-radius: 50px;
         background-color: #EFC862;
     }
 </style>

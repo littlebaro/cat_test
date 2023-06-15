@@ -1,5 +1,3 @@
-//import home from "@/components/home.vue" 
-
 export const routes = [
   {
       path: "/",
@@ -33,18 +31,19 @@ export const routes = [
   }, 
   {
     path: "/",
-    component: () => import("@/layout/errorPageLayout.vue"),
+    component: () => import("@/layout/errorPageLayout.vue"), 
     children: [
       {
-        path: "IdentityDenyView",
-        name: "IdentityDenyView",
-        component: () => import("@/views/IdentityDenyView.vue")
-      },
-      {
-        path: ":pathMatch(.*)*",
-        name: "NotFound",
-        component: () => import("@/views/PageNotFound.vue")
-      },
+        path: "",
+        component: () => import("@/pages/homePages.vue"),
+        children: [
+          {
+            path: ":pathMatch(.*)*",
+            name: "NotFound",
+            component: () => import("@/pages/404Pages.vue"), 
+          },
+        ]
+      }, 
     ],
   }
 ]

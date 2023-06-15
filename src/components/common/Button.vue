@@ -12,7 +12,11 @@
 </script> 
 
 <template>
+
     <button :type="props.type" :class="props.class"> 
+
         <slot></slot>
+        
     </button>
+
 </template>

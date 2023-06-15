@@ -1,6 +1,6 @@
 <script setup>
-    import { ref } from "vue";
-    import menuBtn from "../components/common/menuBtn.vue";
+    import { ref, provide } from "vue";
+    import MenuBtn from "../components/common/menuBtn.vue";
 
     const menuHidden = ref( false );  
     
@@ -15,17 +15,17 @@
 
         <div class="md:hidden flex w-82px h-61px px-24px py-8px md:m-40px text-41px text-white font-bold items-center">CAT</div>
 
-        <div class="hidden lg:flex h-25px gap-55px text-center"> 
+        <div class="hidden lg:flex gap-55px text-center"> 
 
-            <menuBtn :to="'/'">Home</menuBtn>
+            <MenuBtn :to="'/'">Home</MenuBtn>
 
-            <menuBtn :to="'/Aircle'">Aircle</menuBtn>
+            <MenuBtn :to="'Aircle'">Aircle</MenuBtn>
 
-            <menuBtn :to="'/About'">About</menuBtn>
+            <MenuBtn :to="'About'">About</MenuBtn>
 
-            <menuBtn :to="'/News'">News</menuBtn>
+            <MenuBtn :to="'News'">News</MenuBtn>
 
-            <menuBtn :to="'/loginPages'">Login</menuBtn>  
+            <MenuBtn :to="'loginPages'">Login</MenuBtn>  
 
         </div>
 
@@ -45,15 +45,15 @@
 
         <div class="grid h-25px p-40px gap-15px text-center justify-end">
             
-            <menuBtn :to="'/'" @click="toggleMudel">Home</menuBtn>
+            <MenuBtn :to="'/'" @click="toggleMudel">Home</MenuBtn>
 
-            <menuBtn :to="'/Aircle'" @click="toggleMudel">Aircle</menuBtn>
+            <MenuBtn :to="'Aircle'" @click="toggleMudel">Aircle</MenuBtn>
 
-            <menuBtn :to="'/About'" @click="toggleMudel">About</menuBtn>
+            <MenuBtn :to="'About'" @click="toggleMudel">About</MenuBtn>
 
-            <menuBtn :to="'/News'" @click="toggleMudel">News</menuBtn>
+            <MenuBtn :to="'News'" @click="toggleMudel">News</MenuBtn>
 
-            <menuBtn :to="'/loginPages'" @click="toggleMudel">Login</menuBtn> 
+            <MenuBtn :to="'loginPages'" @click="toggleMudel">Login</MenuBtn> 
 
         </div>
 
