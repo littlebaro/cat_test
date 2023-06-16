@@ -1,12 +1,13 @@
 <script setup>
-    import { ref, provide } from "vue";
+    import { ref } from "vue"; 
+
     import MenuBtn from "../components/common/menuBtn.vue";
 
     const menuHidden = ref( false );  
     
     function toggleMudel() {
         menuHidden.value = !menuHidden.value; 
-    };
+    };  
 </script> 
 
 <template>
@@ -25,7 +26,7 @@
 
             <MenuBtn :to="'News'">News</MenuBtn>
 
-            <MenuBtn :to="'loginPages'">Login</MenuBtn>  
+            <MenuBtn :to="'loginPages'" >Login</MenuBtn>  
 
         </div>
 

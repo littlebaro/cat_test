@@ -19,14 +19,14 @@ axiosInstance.interceptors.response.use(function (response) {
     const { status, data: respData = {} } = response;
     const { data, success, message } = respData;
 
-    if ( !success ) {
+   if ( !success ) {
         Swal.fire({
             icon: 'warning',
             text: message,
             timer: 1500,
             timerProgressBar: true,
-        });
-    };
+        })
+    }; 
 
     return { status, data, success, message };
 }, function (error) {

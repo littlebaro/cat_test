@@ -28,5 +28,5 @@
         width: auto;
         /*text-decoration: underline;*/
         background-color: #EFC862;
-    }
+    } 
 </style>

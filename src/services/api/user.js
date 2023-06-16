@@ -1,6 +1,6 @@
 import { axiosInstance } from "../axiosIntance";
 
-export const FETCH_USER_A = {
+export const FETCH_USER = {
     login: (data) => axiosInstance.post( "/AllToken/Login", data ),
     getUserInfo: () => axiosInstance.get( "/AllToken/GetLoginInfo" )
 };

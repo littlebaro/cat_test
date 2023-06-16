@@ -1,9 +1,9 @@
 <template>
 
-    <div class="flex px-40px pt-40px md:pt-125px md:px-0px justify-between">
+    <div class="flex px-40px pt-2px md:pt-125px md:px-0px justify-between">
 
         <!-- main_left -->
-        <div class="hidden lg:flex flex-col font-medium gap-24px ml-[calc(242px-163px)]">
+        <div class="hidden lg:flex flex-1 flex-col font-medium gap-24px ml-[calc(242px-163px)]">
 
             <div class="grid text-28px leading-40px gap-8px">
                 <span>/ 01 </span>

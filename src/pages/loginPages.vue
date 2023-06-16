@@ -2,7 +2,7 @@
     import { reactive, ref, inject } from "vue"; 
     import { useRouter } from "vue-router"; 
     import { setupUserAuthStore } from "@/stores";
-    import { FETCH_USER_A } from "@/services2";
+    import { FETCH_USER } from "@/services";
     import { useForm } from 'vee-validate';
 
     import MenuBtn from "../components/common/menuBtn.vue";
@@ -33,18 +33,18 @@
     const Swal = inject( "$swal" ); 
     const router = useRouter()
 
-    //const userAuthStore = setupUserAuthStore()
-    //const { FN_SETUP_ACCESSTOKEN } = userAuthStore
+    const userAuthStore = setupUserAuthStore()
+    const { FN_SETUP_ACCESSTOKEN } = userAuthStore
 
     async function onSubmit(value) {
         //console.log( "value", value );
-        const { data, message, success } = await FETCH_USER_A.login(value)
-        console.log( data, success )
+        const { data, message, success } = await FETCH_USER.login(value)
+        //console.log( data, success )
 
         if (!success) return 
-        //const { accessToken } = data
+        const { accessToken } = data
 
-        //await FN_SETUP_ACCESSTOKEN(accessToken)
+        await FN_SETUP_ACCESSTOKEN(accessToken)
         Swal.fire({
             icon: 'success',
             text: message,
@@ -53,7 +53,8 @@
         }).then(() => {
             router.push('/')
         });
-    }; 
+        console.log(accessToken)
+    };  
 </script>
 
 <template>
