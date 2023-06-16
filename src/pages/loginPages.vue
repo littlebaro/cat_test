@@ -3,6 +3,7 @@
     import { useRouter } from "vue-router"; 
     import { setupUserAuthStore } from "@/stores";
     import { FETCH_USER_A } from "@/services2";
+    import { useForm } from 'vee-validate';
 
     import MenuBtn from "../components/common/menuBtn.vue";
     import Button from "../components/common/button.vue";
@@ -65,9 +66,9 @@
 
             <VForm class="grid gap-20px" @submit="onSubmit" :validation-schema="formValidationSchema">
 
-                <TextInput type="text" :name="'username'" :label="'帳號'" :placeholder="'請輸入帳號'"  :beforeIcon="'before:content-[url(/public/user-regular.svg)]'" v-model="user.username" autocomplete="on"></TextInput>
+                <TextInput type="text" name="username" label="帳號" placeholder="請輸入帳號"  beforeIcon="before:content-[url(/public/user-regular.svg)]" autocomplete="on"></TextInput>
 
-                <TextInput :type="isActive ? 'password' : 'text'" :name="'password'" :label="'我是'" :placeholder="'請輸入密碼'" :beforeIcon="'before:content-[url(/public/lock-regular.svg)]'" v-model="user.password">
+                <TextInput :type="isActive ? 'password' : 'text'" name="password" label="密碼" placeholder="請輸入密碼" beforeIcon="before:content-[url(/public/lock-regular.svg)]">
 
                     <template #password>
 
@@ -81,13 +82,11 @@
                 
                 </TextInput>
 
-                <Button :type="'submit'">登入</Button>                
+                <Button type="submit">登入</Button>                
 
-                <MenuBtn :to="'/'" :class="'w-60px'">home</MenuBtn> 
+                <MenuBtn :to="'/'" class="w-60px">home</MenuBtn> 
 
             </VForm>
-
-            <input type="text" name="" class="">
 
         </div>
 
