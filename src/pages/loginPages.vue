@@ -2,7 +2,7 @@
     import { reactive, ref, inject } from "vue"; 
     import { useRouter } from "vue-router"; 
     import { setupUserAuthStore } from "@/stores";
-    import { FETCH_USER } from "@/services";
+    import { FETCH_USER_A } from "@/services2";
     import { useForm } from 'vee-validate';
 
     import MenuBtn from "../components/common/menuBtn.vue";
@@ -38,7 +38,7 @@
 
     async function onSubmit(value) {
         //console.log( "value", value );
-        const { data, message, success } = await FETCH_USER.login(value)
+        const { data, message, success } = await FETCH_USER_A.login(value)
         //console.log( data, success )
 
         if (!success) return 
@@ -51,9 +51,8 @@
             timer: 3000,
             timerProgressBar: true
         }).then(() => {
-            router.push('/')
-        });
-        console.log(accessToken)
+            //router.push('/')
+        }); 
     };  
 </script>
 

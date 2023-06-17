@@ -1,6 +1,6 @@
 import { setupUserAuthStore } from "../stores";
 import { FETCH_USER } from "../services/api/user"
-import { GET_COOKIES } from "../utils"
+import { GET_COOKIES } from "@/utils" 
 
 export function setupRoutePermission(routerInstance) {
   routerInstance.beforeEach(async (to, from)=> {
@@ -13,29 +13,29 @@ export function setupRoutePermission(routerInstance) {
 
     const userAccessToken = GET_COOKIES() || "";
     await FN_SETUP_ACCESSTOKEN(userAccessToken);
-    
+
     if (to.path === "/") {
       if (!userAccessToken) {
         return "/loginPages";
-      } else {
-        // const { data = {}, status } = await FETCH_USER.getUserInfo();
-        // const { result } = data;
-        // if (status === 200) {
-        //   FN_SETUP_USERINFO(result);
-        //   return true;
-        // } else {
-        //   await FN_LOGOUT();
-        //   return "/loginPages";
-        // }
+      } else { 
+        const { data = {}, status } = await FETCH_USER.getUserInfo();
+        const { result } = data;
+        if (status === 200) {
+          FN_SETUP_USERINFO(result);
+          return true;
+        } else {
+          await FN_LOGOUT();
+          return "/loginPages";
+        }
       }
     }
 
-    // if (to.path === "/loginPages") {
-    //   if (userAccessToken) { 
-    //     return false;
-    //   } else {
-    //     return true;
-    //   };
-    // };
+    if (to.path === "/loginPages") {
+      if (userAccessToken) { 
+        return false;
+      } else {
+        return true;
+      };
+    };
   });
 };

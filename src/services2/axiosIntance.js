@@ -5,10 +5,10 @@ import Swal from "sweetalert2";
 
 const axiosInstance = axios.create({
     baseURL: "/service/api",
-});
+}); 
 
 axiosInstance.interceptors.request.use(function (config) {
-    //console.log( { config } );
+    //console.log({ config } );
     return config;
 }, function (error) { 
     return Promise.reject(error);
