@@ -1,5 +1,5 @@
 import { setupUserAuthStore } from "../stores";
-import { FETCH_USER } from "../services/api/user"
+import { FETCH_USER_A } from "../services2/api/user"
 import { GET_COOKIES } from "@/utils" 
 
 export function setupRoutePermission(routerInstance) {
@@ -16,9 +16,9 @@ export function setupRoutePermission(routerInstance) {
 
     if (to.path === "/") {
       if (!userAccessToken) {
-        return "/loginPages";
+        return ;
       } else { 
-        const { data = {}, status } = await FETCH_USER.getUserInfo();
+        const { data = {}, status } = await FETCH_USER_A.getUserInfo();
         const { result } = data;
         if (status === 200) {
           FN_SETUP_USERINFO(result);

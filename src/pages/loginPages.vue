@@ -31,15 +31,14 @@
     };
 
     const Swal = inject( "$swal" ); 
-    const router = useRouter()
+    const router = useRouter();
 
-    const userAuthStore = setupUserAuthStore()
-    const { FN_SETUP_ACCESSTOKEN } = userAuthStore
+    const userAuthStore = setupUserAuthStore();
+    const { FN_SETUP_ACCESSTOKEN } = userAuthStore;
 
     async function onSubmit(value) {
-        //console.log( "value", value );
         const { data, message, success } = await FETCH_USER_A.login(value)
-        //console.log( data, success )
+        //console.log( data, success ) 
 
         if (!success) return 
         const { accessToken } = data
@@ -51,9 +50,9 @@
             timer: 3000,
             timerProgressBar: true
         }).then(() => {
-            //router.push('/')
+            router.push('/')
         }); 
-    };  
+    };
 </script>
 
 <template>
@@ -84,7 +83,7 @@
 
                 <Button type="submit">登入</Button>                
 
-                <MenuBtn :to="'/'" class="w-60px">home</MenuBtn> 
+                <MenuBtn :to="'/'" class="w-60px h-auto text-center hover:border-1px  hover:border-#ffffff/50% rounded-50px duration-500">home</MenuBtn> 
 
             </VForm>
 

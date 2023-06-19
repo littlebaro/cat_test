@@ -1,4 +1,4 @@
-<template>
+<template> 
 
     <div class="flex px-40px pt-2px md:pt-125px md:px-0px justify-between">
 
@@ -36,6 +36,6 @@
 
         </div>
 
-    </div> 
-
+    </div>
+    
 </template>

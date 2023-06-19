@@ -1,13 +1,37 @@
 <script setup>
-    import { ref } from "vue"; 
+    import { ref, computed } from "vue";
+    import { setupUserAuthStore } from "@/stores";
+    import Swal from "sweetalert2"; 
+    import { GET_COOKIES } from "@/utils"
 
     import MenuBtn from "../components/common/menuBtn.vue";
 
-    const menuHidden = ref( false );  
+    const accessToken = GET_COOKIES() || ""; 
+    const isAccessToken = ref(accessToken);
+
+    const myLogin = computed(() => { 
+        return isAccessToken.value == "" ? 
+        { "text": "login", "myclisk":"" } : 
+        { "text": "loginOut", "myclisk": loginOut } 
+    });
+
+    const userAuthStore = setupUserAuthStore();
+    const { FN_LOGOUT } = userAuthStore; 
     
+    async function loginOut() {
+        FN_LOGOUT();
+        Swal.fire({
+            icon: 'success',
+            text: "登出成功",
+            timer: 3000,
+            timerProgressBar: true
+        }); 
+    };
+     
+    const menuHidden = ref( false ); 
     function toggleMudel() {
         menuHidden.value = !menuHidden.value; 
-    };  
+    }; 
 </script> 
 
 <template>
@@ -26,7 +50,7 @@
 
             <MenuBtn :to="'News'">News</MenuBtn>
 
-            <MenuBtn :to="'loginPages'" >Login</MenuBtn>  
+            <MenuBtn :to="'loginPages'" @click="myLogin.myclisk">{{ myLogin.text }}</MenuBtn>
 
         </div>
 
@@ -40,7 +64,7 @@
 
     </div>
 
-    <div class="w-full h-full absolute top-0 left-0 bg-gradient-to-b from-#313132 to-#161618 z-50" :class="menuHidden ? 'block' : 'hidden'" v-if="menuHidden">
+    <div class="w-full h-full absolute top-0 left-0 bg-gradient-to-b from-#313132 to-#161618 z-50 fixed top-0" :class="menuHidden ? 'block' : 'hidden'" v-if="menuHidden" >
 
         <div class="w-82px h-61px px-24px py-8px md:m-40px text-41px text-white font-bold items-center">CAT</div>
 
@@ -54,7 +78,7 @@
 
             <MenuBtn :to="'News'" @click="toggleMudel">News</MenuBtn>
 
-            <MenuBtn :to="'loginPages'" @click="toggleMudel">Login</MenuBtn> 
+            <MenuBtn :to="'loginPages'" @click="myLogin.myclisk">{{ myLogin.text }}</MenuBtn>
 
         </div>
 

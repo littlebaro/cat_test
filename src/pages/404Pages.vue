@@ -1,6 +1,6 @@
 <template>
 
-    <div class="grid text-30px m-auto"> 
+    <div class="grid px-40px pt-2px md:pt-125px md:px-0px text-30px m-auto"> 
 
          <div>您好！</div>
 
