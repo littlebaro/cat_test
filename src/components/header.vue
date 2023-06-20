@@ -63,31 +63,35 @@
         </div>
 
     </div>
+    
+    <Transition name="fade">
 
-    <div class="w-full h-full absolute top-0 left-0 bg-gradient-to-b from-#313132 to-#161618 z-50 fixed top-0" :class="menuHidden ? 'block' : 'hidden'" v-if="menuHidden" >
+        <div class="w-full h-full absolute top-0 left-0 bg-gradient-to-b from-#313132 to-#161618 z-50 fixed top-0" :class="menuHidden ? 'block' : 'hidden'" v-if="menuHidden" >
 
-        <div class="w-82px h-61px px-24px py-8px md:m-40px text-41px text-white font-bold items-center">CAT</div>
+            <div class="w-82px h-61px px-24px py-8px md:m-40px text-41px text-white font-bold items-center">CAT</div>
 
-        <div class="grid h-25px p-40px gap-15px text-center justify-end">
-            
-            <MenuBtn :to="'/'" @click="toggleMudel">Home</MenuBtn>
+            <div class="grid h-25px p-40px gap-15px text-center justify-end">
+                
+                <MenuBtn :to="'/'" @click="toggleMudel">Home</MenuBtn>
 
-            <MenuBtn :to="'Aircle'" @click="toggleMudel">Aircle</MenuBtn>
+                <MenuBtn :to="'Aircle'" @click="toggleMudel">Aircle</MenuBtn>
 
-            <MenuBtn :to="'About'" @click="toggleMudel">About</MenuBtn>
+                <MenuBtn :to="'About'" @click="toggleMudel">About</MenuBtn>
 
-            <MenuBtn :to="'News'" @click="toggleMudel">News</MenuBtn>
+                <MenuBtn :to="'News'" @click="toggleMudel">News</MenuBtn>
 
-            <MenuBtn :to="'loginPages'" @click="myLogin.myclisk">{{ myLogin.text }}</MenuBtn>
+                <MenuBtn :to="'loginPages'" @click="myLogin.myclisk">{{ myLogin.text }}</MenuBtn>
+
+            </div>
+
+            <div class="w-52px items-center cursor-pointer absolute top-24px right-0px"> 
+
+                <img src="public/close.svg" alt="stream" @click="toggleMudel"/>
+
+            </div>
 
         </div>
-
-        <div class="w-52px items-center cursor-pointer absolute top-24px right-0px"> 
-
-            <img src="public/close.svg" alt="stream" @click="toggleMudel"/>
-
-        </div>
-
-    </div>
+        
+    </Transition>
 
 </template>

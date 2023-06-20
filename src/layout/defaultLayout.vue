@@ -6,7 +6,15 @@
 <template>
   <!--Header/--> 
     
-  <router-view></router-view>
+  <!--router-view></router-view-->
+  
+  <div class="grid bg-gradient-to-b from-#313132 to-#161618 "> 
+    <router-view v-slot="{ Component }">
+      <transition name="fade">
+        <component :is="Component" />
+      </transition>
+    </router-view>
+  </div>
   
   <!--Footer/-->
-</template>
+</template> 

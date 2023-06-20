@@ -93,10 +93,13 @@
 
         <!--p class="help-message" v-show="errorMessage || meta.valid">
           {{ errorMessage || successMessage }}
-        </p--> 
-        <Transition name="fade">
-        <VErrMsg class="text-red-500" :name="nameRef"/>
+        </p-->
+
+        <Transition name="slide-fade">
+            <VErrMsg class="text-red-500" :name="nameRef"/>
         </Transition>
+        
     </div>
 
 </template>
+

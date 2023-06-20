@@ -10,12 +10,12 @@ export const routes = [
             { 
               path: "", 
               name: "homeInfo", 
-              component: () => import("@/components/homeInfo.vue") 
+              component: () => import("@/components/homeInfo.vue"),
             },
             {
               path: "Aircle",
               name: "Aircle",
-              component: () => import("@/components/Aircle.vue")
+              component: () => import("@/components/Aircle.vue"),
             },
           ]
         }, 
@@ -31,7 +31,8 @@ export const routes = [
   }, 
   {
     path: "/",
-    component: () => import("@/layout/errorPageLayout.vue"), 
+    //component: () => import("@/layout/errorPageLayout.vue"),
+    component: () => import("@/layout/defaultLayout.vue"),
     children: [
       {
         path: "",
@@ -40,10 +41,10 @@ export const routes = [
           {
             path: ":pathMatch(.*)*",
             name: "NotFound",
-            component: () => import("@/pages/404Pages.vue"), 
+            component: () => import("@/pages/404Pages.vue"),
           },
         ]
-      }, 
+      },
     ],
   }
 ]
