@@ -1,6 +1,6 @@
-<template> 
+<template>
 
-    <div class="flex p-40px pt-2px md:pt-125px md:px-0px justify-between duration-500 ease-in-out">
+    <div class="flex p-40px pt-2px md:pt-125px md:px-0px justify-between duration-500 ease-in-out bg-#ffffff/50% rounded-50px relative"> 
 
         <!-- main_left -->
         <div class="hidden lg:flex flex-1 flex-col font-medium gap-24px ml-[calc(242px-163px)]">
@@ -34,7 +34,9 @@
                 The cat is a domestic species of small carnivorous mammal.It is the only domesticated species in the family Felidae and is often referred to as the domestic cat to distinguish it from the wild members of the family.
             </div>
 
-        </div>
+        </div> 
+
+        <slot name="test"></slot>
 
     </div>
     

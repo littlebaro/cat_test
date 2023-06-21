@@ -10,14 +10,9 @@
     import TextInput from "../components/common/TextInput.vue"; 
 
     const formValidationSchema = {
-        username: 'required|alpha_num',
+        account: 'required|alpha_num',
         password: 'required|alpha_num|min:6',
     };
-
-    const user = ref({
-        username: "system",
-        password: "123456",
-    });
 
     const author = reactive({
         eyeclose: "/eye-slash-regular.svg",
@@ -65,7 +60,7 @@
 
             <VForm class="grid gap-20px" @submit="onSubmit" :validation-schema="formValidationSchema">
 
-                <TextInput type="text" name="username" label="帳號" placeholder="請輸入帳號"  beforeIcon="before:content-[url(/public/user-regular.svg)]" autocomplete="on"></TextInput>
+                <TextInput type="text" name="account" label="帳號" placeholder="請輸入帳號"  beforeIcon="before:content-[url(/public/user-regular.svg)]" autocomplete="on"></TextInput>
 
                 <TextInput :type="isActive ? 'password' : 'text'" name="password" label="密碼" placeholder="請輸入密碼" beforeIcon="before:content-[url(/public/lock-regular.svg)]">
 

@@ -1,8 +1,13 @@
-body{
-  margin: 0; 
-  padding: 0rem; 
-  box-sizing:border-box; 
-  height:100%;
+body {
+  margin: 0;
+  padding: 0rem;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+  scrollbar-width: none;
 }
 
 .slide-fade-enter-active {

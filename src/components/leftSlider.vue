@@ -1,7 +1,7 @@
 <template>
     <div class="hidden md:grid h-auto h-77px w-162px md:border-r-1px md:border-r-solid border-r-#707070 bordr content-between sticky">
       
-        <div class="flex w-82px h-61px md:m-40px text-41px text-white font-bold items-center sticky top-40px">CAT</div>
+        <div class="flex w-82px h-61px md:m-40px text-41px text-white font-bold items-center sticky top-40px animate-bounce">CAT</div>
 
         <div class="hidden md:grid h-124px gap-32px items-center justify-center mb-40px sticky bottom-40px">
 
