@@ -23,9 +23,17 @@ export const routes = [
           path: "loginPages",
           name: "loginPages",
           meta: {
-            requiresAuth: false
+            requiresAuth: true
           },
           component: () => import("@/pages/loginPages.vue")
+        },
+        {
+          path: "userGuide",
+          name: "userGuide",
+          meta: {
+            requiresAuth: false
+          },
+          component: () => import("@/pages/userGuide.vue")
         },
       ],
   }, 

@@ -46,7 +46,7 @@
 
             <MenuBtn :to="'Aircle'">Aircle</MenuBtn>
 
-            <MenuBtn :to="'About'">About</MenuBtn>
+            <MenuBtn :to="'userGuide'">userGuide</MenuBtn>
 
             <MenuBtn :to="'News'">News</MenuBtn>
 

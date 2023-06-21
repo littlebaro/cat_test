@@ -15,7 +15,7 @@
     
   <div class="grid grid-flow-col bg-gradient-to-b from-#313132 to-#161618 font-normal font-sans relative">
 
-    <!--Bgcover v-if="isAccessToken"></Bgcover-->
+    <Bgcover v-if="isAccessToken"></Bgcover>
     
     <!-- left --> 
     <leftSlider /> 
