@@ -3,7 +3,7 @@
         <div id="app" data-v-app="">
             <main class="w-full pt-40px md:pt-60px">
                 <section>
-                    <div class="w-full fixed top-0 left-0 z-61 py-10px px-5% bg-gradient-to-b md:to-#C3E7F9 from-#A4DAF6/100 flex flex-col gap-y-10px md:gap-y-0 md:flex-row md:items-center md:justify-between duration-300 to-#C3E7F9">
+                    <div class="w-full fixed top-0 left-0 z-3 py-10px px-5% bg-gradient-to-b md:to-#C3E7F9 from-#A4DAF6/100 flex flex-col gap-y-10px md:gap-y-0 md:flex-row md:items-center md:justify-between duration-300 to-#C3E7F9">
                         <div class="flex items-center md:hidden w-full">
                             <svg class="w-30px svg-inline--fa fa-bars-sort text-32px cursor-pointer" aria-hidden="true"
                                 focusable="false" data-prefix="far" data-icon="bars-sort" role="img"
@@ -19,7 +19,7 @@
                             </a>
                         </h1>
                         <!-- 電腦版選單 -->
-                        <ul class="hidden md:flex items-center justify-end gap-y-30px gap-y-0 gap-x-16px text-18px text-#3f3f3f text-black px-0 py-0 duration-300 z-50">
+                        <ul class="hidden md:flex items-center justify-end gap-y-30px gap-y-0 gap-x-16px text-18px text-#3f3f3f text-black px-0 py-0 duration-300 z-45">
                             <li class="group relative">
                                 <a href="/route" class="relative hover:text-DarkBlue after-content-none after-absolute after-bottom--2px after-left-0 after-bg-DarkBlue after-h-2px after-w-0 hover:after-w-full after-duration-500 after-ease-[cubic-bezier(.99,.12,.15,1)]" title="前往路線資訊">
                                     路線資訊
