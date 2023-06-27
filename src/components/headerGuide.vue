@@ -46,7 +46,7 @@
 
             <MenuBtn :to="'Aircle'">Aircle</MenuBtn>
 
-            <MenuBtn :to="'About'">About</MenuBtn>
+            <MenuBtn :to="'userGuide'">userGuide</MenuBtn>
 
             <MenuBtn :to="'News'">News</MenuBtn>
 
@@ -78,7 +78,7 @@
 
                 <MenuBtn :to="'Aircle'" @click="toggleMudel">Aircle</MenuBtn>
 
-                <MenuBtn :to="'About'" @click="toggleMudel">About</MenuBtn>
+                <MenuBtn :to="'userGuide'" @click="toggleMudel">userGuide</MenuBtn>
 
                 <MenuBtn :to="'News'" @click="toggleMudel">News</MenuBtn>
 

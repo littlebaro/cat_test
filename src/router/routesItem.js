@@ -17,6 +17,11 @@ export const routes = [
               name: "Aircle",
               component: () => import("@/components/Aircle.vue"),
             },
+            {
+              path: "About",
+              name: "About",
+              component: () => import("@/components/About.vue"),
+            },
           ]
         }, 
         {
@@ -30,9 +35,6 @@ export const routes = [
         {
           path: "userGuide",
           name: "userGuide",
-          meta: {
-            requiresAuth: false
-          },
           component: () => import("@/pages/userGuide.vue")
         },
       ],

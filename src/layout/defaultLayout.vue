@@ -4,9 +4,7 @@
 </script>
 
 <template>
-  <!--Header/--> 
-    
-  <!--router-view></router-view-->
+  <!--Header/-->
   
   <div class="grid bg-gradient-to-b from-#313132 to-#161618 relative"> 
 

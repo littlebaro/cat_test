@@ -15,6 +15,10 @@
         { "text": "loginOut", "myclisk": loginOut } 
     });
 
+    const myGuide = computed(() => {
+        return isAccessToken.value == "" ? { "text": "userGuide" } : { "text": "About" }
+    });
+
     const userAuthStore = setupUserAuthStore();
     const { FN_LOGOUT } = userAuthStore; 
     
@@ -46,7 +50,7 @@
 
             <MenuBtn :to="'Aircle'">Aircle</MenuBtn>
 
-            <MenuBtn :to="'userGuide'">userGuide</MenuBtn>
+            <MenuBtn :to="myGuide.text">{{ myGuide.text }}</MenuBtn>
 
             <MenuBtn :to="'News'">News</MenuBtn>
 
@@ -76,7 +80,7 @@
 
                 <MenuBtn :to="'Aircle'" @click="toggleMudel">Aircle</MenuBtn>
 
-                <MenuBtn :to="'About'" @click="toggleMudel">About</MenuBtn>
+                <MenuBtn :to="myGuide.text" @click="toggleMudel">{{ myGuide.text }}</MenuBtn> 
 
                 <MenuBtn :to="'News'" @click="toggleMudel">News</MenuBtn>
 
