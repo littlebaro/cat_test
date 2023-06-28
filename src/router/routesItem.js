@@ -17,25 +17,15 @@ export const routes = [
               name: "Aircle",
               component: () => import("@/components/Aircle.vue"),
             },
-            {
-              path: "About",
-              name: "About",
-              component: () => import("@/components/About.vue"),
-            },
           ]
         }, 
         {
           path: "loginPages",
           name: "loginPages",
           meta: {
-            requiresAuth: true
+            requiresAuth: false
           },
           component: () => import("@/pages/loginPages.vue")
-        },
-        {
-          path: "userGuide",
-          name: "userGuide",
-          component: () => import("@/pages/userGuide.vue")
         },
       ],
   }, 

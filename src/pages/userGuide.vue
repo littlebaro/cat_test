@@ -693,7 +693,4 @@
     .bullet {
         width:20px; height:20px; background-color: #e1e1e1; border-radius: 50%; margin:0 5px; 
     }
-    a, div {
-        pointer-events: none;
-    }
 </style>

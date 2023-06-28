@@ -1,13 +1,17 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import path from 'path';
+import Pages from 'vite-plugin-pages';
+import Layouts from 'vite-plugin-vue-layouts';
 import UnoCSS from 'unocss/vite'
 
 export default defineConfig({
   base: '/',
   plugins: [
-    vue(), 
-    UnoCSS()
+    vue(),
+    Pages(), 
+    Layouts(),
+    UnoCSS(),
   ],
   resolve: {
     alias: [
