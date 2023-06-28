@@ -14,7 +14,7 @@ export function setupRoutePermission(routerInstance) {
     const userAccessToken = GET_COOKIES() || "";
     await FN_SETUP_ACCESSTOKEN(userAccessToken);
 
-    if (to.path === "/") {
+    if (to.path === "/homePage") {
       if (!userAccessToken) {
         return ;
       } else { 

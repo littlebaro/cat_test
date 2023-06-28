@@ -1,3 +1,8 @@
+<route lang="yaml">
+    meta:
+        layout: errorPageLayout
+</route> 
+
 <template> 
 
     <div class="grid text-30px m-auto">

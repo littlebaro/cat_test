@@ -45,7 +45,7 @@
             timer: 3000,
             timerProgressBar: true
         }).then(() => {
-            router.push('/')
+            router.push('/homePage')
         }); 
     };
 </script>
@@ -62,7 +62,7 @@
 
                 <TextInput type="text" name="account" label="帳號" placeholder="請輸入帳號"  beforeIcon="before:content-[url(/public/user-regular.svg)]" autocomplete="on"></TextInput>
 
-                <TextInput :type="isActive ? 'password' : 'text'" name="password" label="密碼" placeholder="請輸入密碼" beforeIcon="before:content-[url(/public/lock-regular.svg)]">
+                <TextInput :type="isActive ? 'password' : 'text'" name="password" label="密碼" placeholder="請輸入密碼" beforeIcon="before:content-[url(/public/lock-regular.svg)]" autocomplete="off">
 
                     <template #password>
 
@@ -78,12 +78,12 @@
 
                 <Button type="submit">登入</Button>                
 
-                <MenuBtn :to="'/'" class="w-60px h-auto text-center border-1px border-#ffffff/30% hover:border-1px  hover:border-#ffffff/50% rounded-50px duration-100 ease-in-out">home</MenuBtn> 
+                <MenuBtn to="homePage" class="w-60px h-auto text-center border-1px border-#ffffff/30% hover:border-1px  hover:border-#ffffff/50% rounded-50px duration-100 ease-in-out">home</MenuBtn> 
 
             </VForm>
 
         </div>
 
-    </div> 
+    </div>
 
 </template>

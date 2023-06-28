@@ -1,6 +1,6 @@
 <script setup>
     import { ref, computed } from "vue";
-    import { setupUserAuthStore } from "@/stores";
+    import { setupUserAuthStore } from "@/stores"; 
     import Swal from "sweetalert2"; 
     import { GET_COOKIES } from "@/utils"
 
@@ -25,7 +25,7 @@
             text: "登出成功",
             timer: 3000,
             timerProgressBar: true
-        }); 
+        });
     };
      
     const menuHidden = ref( false ); 
@@ -42,15 +42,15 @@
 
         <div class="hidden lg:flex gap-55px text-center"> 
 
-            <MenuBtn :to="'/'">Home</MenuBtn>
+            <MenuBtn to="/homePage">Home</MenuBtn>
 
-            <MenuBtn :to="'Aircle'">Aircle</MenuBtn>
+            <MenuBtn to="/homePage/article">Article</MenuBtn>
 
-            <MenuBtn :to="'About'">About</MenuBtn>
+            <MenuBtn to="/homePage/About">About</MenuBtn>
 
-            <MenuBtn :to="'News'">News</MenuBtn>
+            <MenuBtn to="/homePage/News">News</MenuBtn>
 
-            <MenuBtn :to="'loginPages'" @click="myLogin.myclisk">{{ myLogin.text }}</MenuBtn>
+            <MenuBtn to="/loginPages" @click="myLogin.myclisk">{{ myLogin.text }}</MenuBtn>
 
         </div>
 
@@ -72,15 +72,15 @@
 
             <div class="grid h-25px p-40px gap-15px text-center justify-end">
                 
-                <MenuBtn :to="'/'" @click="toggleMudel">Home</MenuBtn>
+                <MenuBtn to="homePage" @click="toggleMudel">Home</MenuBtn>
 
-                <MenuBtn :to="'Aircle'" @click="toggleMudel">Aircle</MenuBtn>
+                <MenuBtn to="/homePage/article" @click="toggleMudel">Article</MenuBtn>
 
-                <MenuBtn :to="'About'" @click="toggleMudel">About</MenuBtn>
+                <MenuBtn to="/homePage/About" @click="toggleMudel">About</MenuBtn>
 
-                <MenuBtn :to="'News'" @click="toggleMudel">News</MenuBtn>
+                <MenuBtn to="/homePage/News" @click="toggleMudel">News</MenuBtn>
 
-                <MenuBtn :to="'loginPages'" @click="myLogin.myclisk">{{ myLogin.text }}</MenuBtn>
+                <MenuBtn to="/loginPages" @click="myLogin.myclisk">{{ myLogin.text }}</MenuBtn>
 
             </div>
 

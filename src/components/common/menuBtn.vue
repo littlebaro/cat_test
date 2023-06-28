@@ -1,9 +1,5 @@
 <script setup>
-    const props = defineProps({
-        to: {
-            type: String,
-            default: "/",
-        },
+    const props = defineProps({ 
         class: {
             type: String,
             default: "w-auto px-10px py-1px rounded-50px hover:bg-#EFC862/50% duration-500 ease-in-out",
@@ -13,7 +9,7 @@
 
 <template>
 
-    <router-link :to="props.to" :class="props.class" class="props.class">
+    <router-link :class="props.class" class="props.class">
 
         <slot></slot>
 

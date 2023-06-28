@@ -10,12 +10,12 @@ export const routes = [
             { 
               path: "", 
               name: "homeInfo", 
-              component: () => import("@/components/homeInfo.vue"),
+              component: () => import("@/pages/homeInfo.vue"),
             },
             {
-              path: "Aircle",
-              name: "Aircle",
-              component: () => import("@/components/Aircle.vue"),
+              path: "Article",
+              name: "Article",
+              component: () => import("@/pages/Article.vue"),
             },
           ]
         }, 
@@ -41,7 +41,7 @@ export const routes = [
           {
             path: ":pathMatch(.*)*",
             name: "NotFound",
-            component: () => import("@/pages/404Pages.vue"),
+            component: () => import("@/pages/[...404Pages].vue"),
           },
         ]
       },
