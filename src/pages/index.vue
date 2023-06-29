@@ -1,4 +1,4 @@
-<template> 
+<template>
 
     <div class="flex p-40px pt-2px md:pt-125px md:px-0px justify-between duration-500 ease-in-out">
 

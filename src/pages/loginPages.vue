@@ -45,7 +45,7 @@
             timer: 3000,
             timerProgressBar: true
         }).then(() => {
-            router.push('/homePage')
+            router.push('/')
         }); 
     };
 </script>
@@ -78,7 +78,7 @@
 
                 <Button type="submit">登入</Button>                
 
-                <MenuBtn to="homePage" class="w-60px h-auto text-center border-1px border-#ffffff/30% hover:border-1px  hover:border-#ffffff/50% rounded-50px duration-100 ease-in-out">home</MenuBtn> 
+                <MenuBtn to="/" class="w-60px h-auto text-center border-1px border-#ffffff/30% hover:border-1px  hover:border-#ffffff/50% rounded-50px duration-100 ease-in-out">home</MenuBtn> 
 
             </VForm>
 

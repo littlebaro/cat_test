@@ -18,7 +18,7 @@
     const userAuthStore = setupUserAuthStore();
     const { FN_LOGOUT } = userAuthStore; 
     
-    async function loginOut() {
+    function loginOut() {
         FN_LOGOUT();
         Swal.fire({
             icon: 'success',
@@ -26,7 +26,7 @@
             timer: 3000,
             timerProgressBar: true
         });
-    };
+    }; 
      
     const menuHidden = ref( false ); 
     function toggleMudel() {
@@ -42,13 +42,13 @@
 
         <div class="hidden lg:flex gap-55px text-center"> 
 
-            <MenuBtn to="/homePage">Home</MenuBtn>
+            <MenuBtn to="/">Home</MenuBtn>
 
-            <MenuBtn to="/homePage/article">Article</MenuBtn>
+            <MenuBtn to="/article">Article</MenuBtn>
 
-            <MenuBtn to="/homePage/About">About</MenuBtn>
+            <MenuBtn to="/About">About</MenuBtn>
 
-            <MenuBtn to="/homePage/News">News</MenuBtn>
+            <MenuBtn to="/News">News</MenuBtn>
 
             <MenuBtn to="/loginPages" @click="myLogin.myclisk">{{ myLogin.text }}</MenuBtn>
 
@@ -72,15 +72,15 @@
 
             <div class="grid h-25px p-40px gap-15px text-center justify-end">
                 
-                <MenuBtn to="homePage" @click="toggleMudel">Home</MenuBtn>
+                <MenuBtn to="/" @click="toggleMudel">Home</MenuBtn>
 
-                <MenuBtn to="/homePage/article" @click="toggleMudel">Article</MenuBtn>
+                <MenuBtn to="/article" @click="toggleMudel">Article</MenuBtn>
 
-                <MenuBtn to="/homePage/About" @click="toggleMudel">About</MenuBtn>
+                <MenuBtn to="/About" @click="toggleMudel">About</MenuBtn>
 
-                <MenuBtn to="/homePage/News" @click="toggleMudel">News</MenuBtn>
+                <MenuBtn to="/News" @click="toggleMudel">News</MenuBtn>
 
-                <MenuBtn to="/loginPages" @click="myLogin.myclisk">{{ myLogin.text }}</MenuBtn>
+                <MenuBtn to="/loginPages" @click="myLogin.myclisk; toggleMudel()">{{ myLogin.text }}</MenuBtn>
 
             </div>
 
