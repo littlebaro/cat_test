@@ -1,3 +1,8 @@
+<route lang="yaml">
+    meta:
+    layout: defaultLayout
+</route> 
+
 <script setup>
     import { reactive, ref, inject } from "vue"; 
     import { useRouter } from "vue-router"; 

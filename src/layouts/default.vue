@@ -28,11 +28,15 @@ const isAccessToken = ref(accessToken);
 
         <!-- main -->
         <!--router-view></router-view-->
-        <router-view v-slot="{ Component }">
-          <transition name="fade">
-            <component :is="Component" />
-          </transition>
-        </router-view>
+        <div class="grid">
+
+          <router-view v-slot="{ Component }">
+            <transition name="fade">
+              <component :is="Component" />
+            </transition>
+          </router-view>
+
+        </div>
 
         <!-- footer -->
         <myfooter class="z-1" />
